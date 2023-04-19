@@ -2,6 +2,7 @@
 
 session_start();
 
+ require( __DIR__ . "/functions.php");
 
 
 ?>
@@ -15,7 +16,7 @@ session_start();
     <title>Password Generator</title>
 </head>
 <body>
-    <form action="generated_password.php" method="GET">
+    <form method="GET">
         <input type="number" id="number_chosen" name="length">
         <label for="number_chosen">Scegli la lunghezza della password da generare</label>
         <button type="submit">Invia</button>

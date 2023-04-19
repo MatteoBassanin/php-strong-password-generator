@@ -1,11 +1,15 @@
 <?php
 
-session_start();
-$_SESSION['numberLength'] = getRandomString($number);
+
 
 //     $number = $_SESSION['numberLength'];
 // $_SESSION['length'] = $number;
+if (isset($_GET['length']) && $_GET['length'] > 0){
+
 $number = $_GET['length'];
+
+$_SESSION['numberLength'] = getRandomString($number);
+
 function getRandomString($number)
 {
     $charactersNumberSymbols = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$#@';
@@ -18,7 +22,7 @@ function getRandomString($number)
 
     return $randomString;
 }
+}
 
-// echo getRandomString($number);
 
 ?>
