@@ -1,13 +1,8 @@
 <?php
+ session_start();
 
-session_start();
-
-if (isset($_SESSION['numberLength'])) {
-    echo $_SESSION['numberLength'];
-}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +12,20 @@ if (isset($_SESSION['numberLength'])) {
     <title>Password Generated</title>
 </head>
 <body>
-    <div class="button"><a href="index.php">Back</a></div>
+    <div class="button"><a href="index.php">Back</a>
+
+        <?php
+
+       
+
+        if (isset($_SESSION['numberLength'])) {
+            echo $_SESSION['numberLength'];
+        }
+
+        
+        ?>
+
+
+    </div>
 </body>
 </html>
