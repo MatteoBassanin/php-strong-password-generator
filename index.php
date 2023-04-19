@@ -1,24 +1,3 @@
-<?php
-
-$number = $_GET['length'];
-function getRandomString($number)
-{
-    $charactersNumberSymbols = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$#@';
-    $randomString = '';
-
-    for ($i = 0; $i < $number; $i++) {
-        $index = rand(0, strlen($charactersNumberSymbols) - 1);
-        $randomString .= $charactersNumberSymbols[$index];
-    }
-
-    return $randomString;
-}
-
-echo getRandomString($number);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +7,10 @@ echo getRandomString($number);
     <title>Password Generator</title>
 </head>
 <body>
-    <form action="index.php" method="GET">
+    <form action="functions.php" method="GET">
         <input type="number" id="number_chosen" name="length">
         <label for="number_chosen">Scegli la lunghezza della password da generare</label>
         <button type="submit">Invia</button>
-
     </form>
 </body>
 </html>
