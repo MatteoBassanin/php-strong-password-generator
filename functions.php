@@ -6,7 +6,7 @@
 // $_SESSION['length'] = $number;
 
 
-if (isset($_GET['length'])){
+if (isset($_GET['length']) && $_GET['length'] > 0){
 
     $number = $_GET['length'];   
     $_SESSION['numberLength'] = getRandomString($number);
