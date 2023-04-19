@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +15,7 @@
     <title>Password Generator</title>
 </head>
 <body>
-    <form action="functions.php" method="GET">
+    <form action="generated_password.php" method="GET">
         <input type="number" id="number_chosen" name="length">
         <label for="number_chosen">Scegli la lunghezza della password da generare</label>
         <button type="submit">Invia</button>

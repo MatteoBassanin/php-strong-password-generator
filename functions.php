@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+$_SESSION['numberLength'] = getRandomString($number);
+
+//     $number = $_SESSION['numberLength'];
+// $_SESSION['length'] = $number;
 $number = $_GET['length'];
 function getRandomString($number)
 {
@@ -14,20 +19,6 @@ function getRandomString($number)
     return $randomString;
 }
 
-echo getRandomString($number);
+// echo getRandomString($number);
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generated</title>
-</head>
-<body>
-    <div><a href="index.php">Back</a></div>
-</body>
-</html>
